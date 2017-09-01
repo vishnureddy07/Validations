@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jquery validation</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+            .form2{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div clas="page-header">
+            <h2 class="login" style="text-align:center;">Login</h2>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="form1 col-md-4 col-md-offset-4">
+                <div>
+                    <h3 class="active">Login</h3>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="" class="form-control" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <input type="button" name="" class="btn btn-info" value="Login">
+                </div>
+                <div>
+                    <p>not a member at yet please? <a href="" id="signup">SignUp</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form2 col-md-4 col-md-offset-4">
+                <div>
+                    <h3 class="active">Signup</h3>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="" class="form-control" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="" class="form-control" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <input type="button" name="" class="btn btn-info" value="Signup">
+                </div>
+                <div>
+                    <p>Already a member please? <a href="" id="login">Login</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+           $(function(){
+               $('#signup').on('click',function(e){
+                $('.form1').css('display','none');
+                $('.form2').css('display','inline');
+                e.preventDefault();
+               });
+           });
+            $(function(){
+               $('#login').on('click',function(e){
+                $('.form2').css('display','none');
+                $('.form1').css('display','inline');
+                e.preventDefault();
+               });
+           });
+        </script>
+    </body>
+</html>
